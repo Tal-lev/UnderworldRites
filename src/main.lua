@@ -8,6 +8,7 @@ local mods = rom.mods
 
 ---@module 'LuaENVY-ENVY-auto'
 mods['LuaENVY-ENVY'].auto()
+
 -- ^ this gives us `public` and `import`, among others
 --	and makes all globals we define private to this plugin.
 ---@diagnostic disable: lowercase-global
@@ -32,6 +33,9 @@ modutil = mods['SGG_Modding-ModUtil']
 chalk = mods["SGG_Modding-Chalk"]
 ---@module 'SGG_Modding-ReLoad'
 reload = mods['SGG_Modding-ReLoad']
+
+---@module 'zannc-GodsAPI-auto'
+gods = mods["zannc-GodsAPI"].auto()
 
 ---@module 'config'
 config = chalk.auto 'config.lua'

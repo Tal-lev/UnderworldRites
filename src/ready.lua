@@ -7,8 +7,12 @@
 -- 	so you will most likely want to have it reference
 --	values and functions later defined in `reload.lua`.
 
+--Loading the package at every room
+modutil.mod.Path.Wrap("SetupMap", function(base, source, args)
+	LoadPackages({ Name = "JarlUlsfark-UnderworldRites" })
+	return base(source, args)
+end)
+
 modutil.once_loaded.game(function()
-
 	import "Keepsakes.lua"
-
 end)

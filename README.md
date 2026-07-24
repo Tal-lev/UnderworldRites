@@ -1,6 +1,6 @@
-# Mod name
+# UnderworldRites
 
-Hades II mod allowing to do some super duper thing.
+A Hades 2 mod that aims to bring aspects of Pyre into Hades 2
 
 ## Features
 
@@ -13,3 +13,7 @@ Hades II mod allowing to do some super duper thing.
 - Do this.
 - Do that.
   - Nope, not that.
+ 
+## Credits
+
+- All icons and animations belong to and are property of SuperGiantGames

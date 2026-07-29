@@ -17,19 +17,19 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
             Points =
 			{
 				{
-					X = -40,
+					X = -50,
 					Y = -24,
 				},
                 {
-					X = -40,
+					X = -50,
 					Y = 24,
 				},
 				{
-					X = 40,
+					X = 50,
 					Y = 24,
 				},
 				{
-					X = 40,
+					X = 50,
 					Y = -24,
 				},
             },
@@ -40,14 +40,31 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
         Name = "PyreAuraSmall",
         InheritFrom = "PyreAuraMedium",
         Range = 3000,
-		Fuse = 5.0,
-		Speed = 600,
-        UnlimitedUnitPenetration = true,
-		MultipleUnitCollisions = false,
+		Fuse = 3.0,
+		Speed = 500,
         ClearCreateAnimations = true,
         Thing = {
-            Graphic = "AuraCastFireFx",
-            Scale = 0.6,
+            Graphic = "AuraCastSmallFireFx",
+            Scale = 1,
+			Points =
+			{
+				{
+					X = -50,
+					Y = -20,
+				},
+                {
+					X = -50,
+					Y = 20,
+				},
+				{
+					X = 50,
+					Y = 20,
+				},
+				{
+					X = 50,
+					Y = -20,
+				},
+            },
         },
     })
 
@@ -74,7 +91,7 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		ImpactFx = "MageProjectileExplosion_LightRanged",
         Range = 2000,
 		TotalFuse = 4.0,
-		Fuse = 0.3,
+		Fuse = 0.5,
 		Speed = 0,
         ImmunityDuration = 0.3,
         Acceleration = 0,
@@ -128,7 +145,7 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		ImpactFx = "MageProjectileExplosion_LightRanged",
         Range = 2000,
 		TotalFuse = 4.0,
-		Fuse = 0.3,
+		Fuse = 0.5,
 		Speed = 0,
         ImmunityDuration = 0.3,
         Acceleration = 0,
@@ -182,7 +199,7 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		ImpactFx = "MageProjectileExplosion_LightRanged",
         Range = 2000,
 		TotalFuse = 4.0,
-		Fuse = 0.3,
+		Fuse = 0.5,
 		Speed = 0,
         DieWithOwner = true,
         ImmunityDuration = 0.3,

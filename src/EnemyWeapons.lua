@@ -143,11 +143,11 @@ WeaponSetData =
 
 			ProjectileName = "PyreAuraSmall",
 
-			PreAttackDuration = 0.667,
+			PreAttackDuration = 0.1,
 			PreAttackAnimationSpeed = 1,
-			FireDuration = 1.0,
+			FireDuration = 1.667,
 			PostAttackDuration = 0.8,
-			BarrelLength = -100,
+			BarrelLength = -600,
 
 			AttackDistance = 700,
 			FireSelfVelocity = 0,
@@ -156,8 +156,8 @@ WeaponSetData =
 			StopBeforeFire = true,
 
 			PreAttackEndShake = false,
-			PreAttackAnimation = "PyreSmall_Cast",
-			FireAnimation = "PyreSmall_Casttwo",
+			PreAttackAnimation = "PyreSmall_Idle",
+			FireAnimation = "PyreSmall_Cast",
 			PostAttackAnimation = "PyreSmall_Idle",
 			--FireFx = "EnemyAura",
 			--FireFxOffset = 300,
@@ -186,13 +186,13 @@ WeaponSetData =
 
 			ProjectileName = "PyreAuraSphereSmall",
 
-			PreAttackDuration = 0.2,
+			PreAttackDuration = 0.4,
 			PreAttackAnimationSpeed = 1,
 			FireDuration = 1.667,
 			PostAttackDuration = 2,
 			BarrelLength = 0,
 
-			AttackDistance = 200,
+			AttackDistance = 150,
 			FireSelfVelocity = 0,
 			MoveWithinRangeTimeout = 2.5,
 			SkipAttackIfMoveTimeout = false,

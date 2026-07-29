@@ -751,6 +751,23 @@ sjson.hook(file, function(data)
 
     table.insert(data.Animations,
     {
+		  Name = "AuraCastSmallFireFx",
+      FilePath = "JarlUlsfark-PyreAuraFxinHades2\\Fx\\AuraCastSmallFireFx\\AuraCastSmallFireFx",
+		  GroupName = "Art_Standing01",
+      Type="Slide",
+		  AddColor = false,
+      PlaySpeed = 30.0,
+		  NumFrames = 50,
+		  EndFrame = 50,
+      StartFrame = 1,
+		  NumAngles = 1,
+		  DefaultScale = 2.0,
+		  ScaleRadius = 300,
+		  Material= "Emissive",
+    })
+
+    table.insert(data.Animations,
+    {
 		  Name = "AuraSphereFxLoop",
       FilePath = "JarlUlsfark-PyreAuraFxinHades2\\Fx\\AuraDefenderTreeLoopFireFx\\AuraDefenderTreeLoopFireFx",
 		  GroupName = "Art_Standing01",

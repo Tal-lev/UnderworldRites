@@ -13,7 +13,7 @@ WeaponSetData =
 			PreAttackAnimationSpeed = 1,
 			FireDuration = 1.667,
 			PostAttackDuration = 1.7,
-			BarrelLength = -400,
+			BarrelLength = -480,
 			AttackDistance = 800,
 			FireSelfVelocity = 0,
 
@@ -31,6 +31,57 @@ WeaponSetData =
 
 			ExpireProjectilesOnHitStun = true,
 			--DoNotRepeatOnAttackFail = true,
+		},
+
+		Sounds =
+		{
+			FireSounds =
+			{
+				{ Name = "/SFX/Enemy Sounds/Guard/EmoteAttacking" },
+			},
+		},
+	},
+
+	PyreMediumAura =
+	{
+		AIData =
+		{
+			
+			Requirements =
+			{
+				MaxPlayerDistance = 700,
+			},
+			
+			DeepInheritance = true,
+
+
+			ProjectileName = "PyreAuraSphereMedium",
+
+			PreAttackDuration = 0.1,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 1.667,
+			PostAttackDuration = 2.,
+			BarrelLength = 0,
+			AttackDistance = 300,
+			FireSelfVelocity = 0,
+			FizzleOldSpawns = true,
+			MoveWithinRangeTimeout = 2,
+			SkipAttackIfMoveTimeout = false,
+
+			TrackTargetDuringCharge = true,
+			StopBeforeFire = true,
+
+			PreAttackEndShake = false,
+			PreAttackAnimation = "PyreMedium_Idle",
+			FireAnimation = "PyreMedium_Cast",
+			PostAttackAnimation = "PyreMedium_Idle",
+			--FireFx = "EnemyAura",
+			--FireFxOffset = 300,
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = false,
+			DoNotRepeatOnAttackFail = true,
 		},
 
 		Sounds =
@@ -126,6 +177,51 @@ WeaponSetData =
 		},
 	},
 
+	PyreSmallAura =
+	{
+		AIData =
+		{
+			DeepInheritance = true,
+
+
+			ProjectileName = "PyreAuraSphereSmall",
+
+			PreAttackDuration = 0.2,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 1.667,
+			PostAttackDuration = 2,
+			BarrelLength = 0,
+
+			AttackDistance = 200,
+			FireSelfVelocity = 0,
+			MoveWithinRangeTimeout = 2.5,
+			SkipAttackIfMoveTimeout = false,
+
+			TrackTargetDuringCharge = true,
+			StopBeforeFire = true,
+
+			PreAttackEndShake = false,
+			PreAttackAnimation = "PyreSmall_Idle",
+			FireAnimation = "PyreSmall_Cast",
+			PostAttackAnimation = "PyreSmall_Idle",
+			--FireFx = "EnemyAura",
+			--FireFxOffset = 300,
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = true,
+			--DoNotRepeatOnAttackFail = true,
+		},
+
+		Sounds =
+		{
+			FireSounds =
+			{
+				{ Name = "/SFX/Enemy Sounds/Guard/EmoteAttacking" },
+			},
+		},
+	},
+
 	PyreLargeThrow =
 	{
 		AIData =
@@ -149,6 +245,50 @@ WeaponSetData =
 			PreAttackEndShake = false,
 			PreAttackAnimation = "PyreLarge_Cast",
 			FireAnimation = "PyreLarge_Casttwo",
+			PostAttackAnimation = "PyreLarge_Idle",
+			--FireFx = "EnemyAura",
+			--FireFxOffset = 300,
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = true,
+			--DoNotRepeatOnAttackFail = true,
+		},
+
+		Sounds =
+		{
+			FireSounds =
+			{
+				{ Name = "/SFX/Enemy Sounds/Guard/EmoteAttacking" },
+			},
+		},
+	},
+
+	PyreLargeAura =
+	{
+		AIData =
+		{
+			DeepInheritance = true,
+
+
+			ProjectileName = "PyreAuraSphereLarge",
+
+			PreAttackDuration = 0.2,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 2,
+			PostAttackDuration = 2,
+			BarrelLength = 0,
+			AttackDistance = 500,
+			FireSelfVelocity = 0,
+			MoveWithinRangeTimeout = 2,
+			SkipAttackIfMoveTimeout = false,
+
+			TrackTargetDuringCharge = true,
+			StopBeforeFire = true,
+
+			PreAttackEndShake = false,
+			PreAttackAnimation = "PyreLarge_Idle",
+			FireAnimation = "PyreLarge_Cast",
 			PostAttackAnimation = "PyreLarge_Idle",
 			--FireFx = "EnemyAura",
 			--FireFxOffset = 300,
@@ -279,6 +419,49 @@ WeaponSetData =
 			FireCreateHealthBar = true,
 
 			SkipSurroundAICount = true,
+		},
+	},
+
+	PyreTreeDefenderAura = 
+	{
+		AIData =
+		{	
+			DeepInheritance = true,
+
+
+			ProjectileName = "PyreAuraSphereSmall",
+
+			PreAttackDuration = 0.1,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 1.667,
+			PostAttackDuration = 2.,
+			BarrelLength = 0,
+			AttackDistance = 4000,
+			FireSelfVelocity = 0,
+			FizzleOldSpawns = true,
+
+			TrackTargetDuringCharge = true,
+			StopBeforeFire = true,
+
+			PreAttackEndShake = false,
+			PreAttackAnimation = "PyreTree_DefenderIdle",
+			FireAnimation = "PyreTree_DefenderIdle",
+			PostAttackAnimation = "PyreTree_DefenderIdle",
+			--FireFx = "EnemyAura",
+			--FireFxOffset = 300,
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = false,
+			DoNotRepeatOnAttackFail = true,
+		},
+
+		Sounds =
+		{
+			FireSounds =
+			{
+				{ Name = "/SFX/Enemy Sounds/Guard/EmoteAttacking" },
+			},
 		},
 	},
 

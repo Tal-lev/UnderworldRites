@@ -675,6 +675,7 @@ sjson.hook(file, function(data)
       Loop = true,
       EndFrame = 260,
       NumAngles = 1,
+      AngleFromOwner = "Ignore",
       NumFrames = 260,
       StartFrame = 1,
       OffsetY = -28,
@@ -700,6 +701,7 @@ sjson.hook(file, function(data)
       NumAngles = 1,
       NumFrames = 260,
       StartFrame = 11,
+      AngleFromOwner = "Ignore",
       OffsetY = -28,
       Scale = 0.5,
       CancelOnOwnerMove = true,
@@ -746,6 +748,52 @@ sjson.hook(file, function(data)
 		  ScaleRadius = 400,
 		  Material= "Emissive",
     })
+
+    table.insert(data.Animations,
+    {
+		  Name = "AuraSphereFxLoop",
+      FilePath = "JarlUlsfark-PyreAuraFxinHades2\\Fx\\AuraDefenderTreeLoopFireFx\\AuraDefenderTreeLoopFireFx",
+		  GroupName = "Art_Standing01",
+      Type="Slide",
+		  AddColor = false,
+      PlaySpeed = 20.0,
+		  NumFrames = 13,
+		  EndFrame = 13,
+      StartFrame = 1,
+		  NumAngles = 1,
+      AngleFromOwner = "Ignore",
+      DisableOwnerRotation = true,
+      RandomRotation = false,
+      RotateWithGravity = false,
+		  DefaultScale = 2.4,
+		  ScaleRadius = 240,
+		  Material= "Emissive",
+    })
+
+    table.insert(data.Animations,
+    {
+		  Name = "AuraSphereFx",
+      FilePath = "JarlUlsfark-PyreAuraFxinHades2\\Fx\\AuraDefenderTreeFireFx\\AuraDefenderTreeFireFx",
+		  GroupName = "Art_Standing01",
+      ChainTo = "AuraSphereFxLoop",
+      Type="Slide",
+		  AddColor = false,
+      PlaySpeed = 20.0,
+		  NumFrames = 27,
+		  EndFrame = 27,
+      StartFrame = 1,
+		  NumAngles = 1,
+      AngleFromOwner = "Ignore",
+      DisableOwnerRotation = true,
+      RandomRotation = false,
+      RotateWithGravity = false,
+		  DefaultScale = 2.4,
+		  ScaleRadius = 240,
+		  Material= "Emissive",
+    })
+
+    
+    
 
 
 return data

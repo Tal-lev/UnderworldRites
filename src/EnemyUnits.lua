@@ -128,9 +128,10 @@ sjson.hook(file, function(data)
 	table.insert(data.Units,
 	{
 		Name = "PyreTreeDefender",
-		InheritFrom = "1_BaseTrap",
+		InheritFrom = "1_BaseEnemy",
 		AutoLockable = false,
 		CollideWithUnits = false,
+		Speed = 0,
 		DefaultAngle = 0.0,
 		DisplayInEditor = true,
 		ImmuneToStun = true,
@@ -218,7 +219,8 @@ UnitSetData.Pyre =
 
 		WeaponOptions =
 		{
-			"PyreMediumThrow",
+			"PyreMediumAura",
+			"PyreMediumThrow", 
 		},
 		--"PyreMediumEvade"
 		ActiveCapWeight = 0.6,
@@ -262,7 +264,7 @@ UnitSetData.Pyre =
 		AIAggroRange = 1250,
 
 		PreferredSpawnPoint = "EnemyPointMelee",
-		Groups = { "FlyingEnemies" },
+		Groups = { "GroundEnemies" },
 		HealthBarOffsetY = -100,
 		HealthBarType = "Small",
 		Material = "Organic",
@@ -301,6 +303,7 @@ UnitSetData.Pyre =
 		WeaponOptions =
 		{
 			"PyreSmallThrow",
+			"PyreSmallAura",
 		},
 
 		GeneratorData =
@@ -381,6 +384,7 @@ UnitSetData.Pyre =
 		WeaponOptions =
 		{
 			"PyreLargeThrow",
+			"PyreLargeAura",
 		},
 
 		GeneratorData =
@@ -484,49 +488,82 @@ UnitSetData.Pyre =
 
 	PyreTreeDefender =
 	{
-		InheritFrom = { "BaseTrap" },
+		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", "LowPolyEnemy" },
 
-		ActivateFuseIfNoSpawner = true,
-		FuseWarningAnimation = "BlastWarningDecal",
+		MaxHealth = 45,
 
+		AIAggroRange = 3000,
+
+		PreferredSpawnPoint = "EnemyPointMelee",
+		Groups = { "GroundEnemies" },
+		HealthBarOffsetY = -100,
+		HealthBarType = "Small",
+		Material = "Organic",
+
+		ActivateFx = "null",
+		ActivateFx2 = "null",
+		ActivateFxPreSpawn = "null",
+		ActivateAnimation = "null",
+		ActivateStartAlpha = 1.0,
+		ArmorSparkAnimation = "HitSparkArmor_Small",
+
+		IsAggroedSound = "/SFX/Enemy Sounds/Radiator/EmoteAlerted",
+		DeathSound = "/SFX/Enemy Sounds/Radiator/EmoteDying",
+		DeathAnimation = "PyreSmall_Banished",
+		DeathFx = "EnemyDeathFxIris",
+
+		AIOptions =
+		{
+			"AggroAI",
+		},
+		
+		StunAnimations = 
+		{
+			Default = "Enemy_Radiator_HitStun",
+		},
 		DefaultAIData =
 		{
 			DeepInheritance = true,
+			PreAttackSound = "/SFX/Enemy Sounds/Radiator/EmoteCharging",
+
+			ExpireProjectilesOnHitStun = true,
 		},
-		TriggerGroups = { "GroundEnemies", "FlyingEnemies", "HeroTeam" },
+		EndAIThreadWaitOnFreezeEnd = true,
+		InterruptWeaponOnFreeze = true,
 
-		OnDamagedFunctionNames = { "ActivateFuse" },
-		OnDeathFireWeapons = { "MineBlast" },
-
-		DissipateAnimation = "BloodMineDeactivated",
-		FuseAnimation = "BloodMineActivated",
-		FuseWarningProjectileName = "MineBlast",
-		FlashOnFuse = true,
-		FuseDuration = 1.0,
-		TriggerDistance = 225,
-		WakeUpDelay = 1.5,
-		ExpirationDuration = 15.0,
-		
-		DestroyDelay = 0.5,
-		AIOptions =
+		WeaponOptions =
 		{
-			"MineAI",
+			"PyreTreeDefenderAura",
 		},
-		AttackDistance = 100,
 
-		CleanupAnimation = "Blank",
-		OutgoingDamageModifiers =
+		GeneratorData =
 		{
+			DifficultyRating = 7,
+			BlockEnemyTypes = {"Radiator_Elite"}
+		},
+
+		ActiveCapWeight = 0.5,
+
+		EnemySightedVoiceLines =
+		{
+			UsePlayerSource = true,
+			RandomRemaining = true,
+			GameStateRequirements = 
 			{
-				Name = "FriendImmunity",
-				IsMultiplier = true,
-				FriendMultiplier = 0,
+				-- None
 			},
+			SkipCooldownCheckIfNonePlayed = true,
+			Cooldowns =
 			{
-				Name = "CharmedMultiplier",
-				IsMultiplier = true,
-				NonPlayerMultiplier = 10,
+				{ Name = "CombatBeginsLinesPlayedRecently", Time = 300 },
 			},
+			TriggerCooldowns = { "MelinoeAnyQuipSpeech", },
+			SuccessiveChanceToPlay = 0.1,
+
+			{ Cue = "/VO/Melinoe_1439", Text = "Spindles." },
+			{ Cue = "/VO/Melinoe_1440", Text = "Spindles!", PlayFirst = true },
+			{ Cue = "/VO/Melinoe_1441", Text = "More Spindles." },
+			{ Cue = "/VO/Melinoe_1442", Text = "Come, Spindles." },
 		},
 	},
 }

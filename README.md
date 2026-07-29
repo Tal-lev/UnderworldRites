@@ -16,3 +16,7 @@ While the mod has been tested decently well it is recommended to backup your sav
 ## Credits
 
 - All icons and animations belong to and are property of SuperGiantGames
+
+## Issues
+
+Report any issues on the mod [github](https://github.com/Tal-lev/UnderworldRites/issues) or [Hades Modding discord](https://discord.gg/KuMbyrN)

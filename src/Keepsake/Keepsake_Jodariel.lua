@@ -217,12 +217,48 @@ gods.CreateKeepsake({
 				ChangeType = "Multiply",
 				ReportValues = { ReportedAoEIncrease = "ChangeValue"},
 			},
+			--FX Axe
 			{
-				AnimationName = "DaggerSwipeFast",
-				AnimationProperty = "Scale",
-				ChangeValue = 1.2,
-				ChangeType = "Multiply",
-			}										
+				WeaponName = "WeaponAxe",
+				FalseTraitName = "AxeRallyAspect",
+				WeaponProperty = "FireFx",
+				ChangeValue = "AxeSwipe1Scale1",
+				ChangeType = "Absolute",
+				ExcludeLinked = true,
+			},
+			{
+				WeaponName = "WeaponAxe2",
+				FalseTraitName = "AxeRallyAspect",
+				WeaponProperty = "FireFx",
+				ChangeValue = "AxeSwipe2Scale1",
+				ChangeType = "Absolute",
+				ExcludeLinked = true,
+			},
+			{
+				WeaponName = "WeaponAxeDash",
+				FalseTraitName = "AxeRallyAspect",
+				WeaponProperty = "FireFx",
+				ChangeValue = "AxeSwipeUpperScale1",
+				ChangeType = "Absolute",
+				ExcludeLinked = true,
+			},
+			--Fx Dagger
+			{
+				WeaponName = "WeaponDagger",
+				FalseTraitName = { "DaggerTripleAspect", },
+				WeaponProperty = "FireFx",
+				ChangeValue = "DaggerSwipeFastScale1",
+				ChangeType = "Absolute",
+				ExcludeLinked = true,
+			},
+			{
+				WeaponName = "WeaponDagger2",
+				FalseTraitName = { "DaggerTripleAspect", },
+				WeaponProperty = "FireFx",
+				ChangeValue = "DaggerSwipeFastFlipScale1",
+				ChangeType = "Absolute",
+				ExcludeLinked = true,
+			},
 		},
     },
 })

@@ -71,7 +71,7 @@ gods.CreateKeepsake({
 				BaseValue = 44.5,
 				ChangeType = "Add",
 				ExcludeLinked = true,
-			},						
+			},				
 		},
     },
 })

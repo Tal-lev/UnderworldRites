@@ -59,6 +59,7 @@ modutil.mod.Path.Wrap("SetupMap", function(base, source, args)
 	return base(source, args)
 end)
 
+import "Codex.lua"
 import "EnemyAnimations.lua"
 import "EnemyProjectiles.lua"
 import "EnemyWeapons.lua"
@@ -68,7 +69,6 @@ import "ModifyGodVFX.lua"
 
 modutil.once_loaded.game(function()
 	import "Keepsakes.lua"
-
 	if (not rom.mods['NikkelM-Zagreus_Journey']) then
 		SetupRunData()
 	end

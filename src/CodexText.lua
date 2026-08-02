@@ -48,6 +48,14 @@ sjson.hook(file, function(data)
     },
 	TextOrder)
 	)
+
+    table.insert(data.Texts, sjson.to_object(
+    {
+      Id = "PyreMonster",
+      DisplayName = "Crone",
+    },
+	TextOrder)
+	)
 return data
 end)
 

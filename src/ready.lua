@@ -59,6 +59,30 @@ modutil.mod.Path.Wrap("SetupMap", function(base, source, args)
 	return base(source, args)
 end)
 
+MaxChaptersWithoutSquish = 8
+modutil.mod.Path.Wrap("CodexScreenCreateChapters", function (base, screen)
+    local numChapters = game.TableLength( game.CodexOrdering.Order )
+    -- fix bad mod ;)
+    screen.ChapterX = 420
+    screen.ChapterSpacingX = 94
+    screen.CategoryIconOffsetX = 0
+    -- realign tab offsets
+    local startingTabOffsetX = -175
+    local startingTabOffsetXDiff = 20
+    for i = 1, #screen.Tabs do
+        screen.Tabs[i].X = startingTabOffsetX + startingTabOffsetXDiff * (i-1)
+    end
+
+    -- squish tabs
+    local additionalOffset = 20
+    if numChapters > MaxChaptersWithoutSquish then
+        screen.ChapterSpacingX = screen.ChapterSpacingX * MaxChaptersWithoutSquish / numChapters
+        screen.ChapterSpacingX = screen.ChapterSpacingX + additionalOffset * MaxChaptersWithoutSquish / numChapters - additionalOffset
+        game.ScreenData.Codex.CategoryIconOffsetX =  (screen.ChapterSpacingX - 94)/2
+    end
+    return base(screen)
+end)
+
 import "Codex.lua"
 import "EnemyAnimations.lua"
 import "EnemyProjectiles.lua"

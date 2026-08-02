@@ -465,6 +465,43 @@ WeaponSetData =
 		},
 	},
 
+	PyreMonsterThrow =
+	{
+		AIData =
+		{
+			DeepInheritance = true,
+
+
+			ProjectileName = "PyreAuraMedium",
+
+			PreAttackDuration = 0.4,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 3.6667,
+			PostAttackDuration = 1.7,
+			BarrelLength = -480,
+			AttackDistance = 800,
+			FireSelfVelocity = 0,
+			NumProjectiles = 9,
+			ProjectileAngleInterval = 10,
+			ProjectileScaleMultiplier = 0.5,
+
+			TrackTargetDuringCharge = true,
+			StopBeforeFire = true,
+
+			PreAttackEndShake = false,
+			PreAttackAnimation = "PyreMonster_Idle",
+			FireAnimation = "PyreMonster_Cast",
+			PostAttackAnimation = "PyreMonster_Idle",
+			--FireFx = "EnemyAura",
+			--FireFxOffset = 300,
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = true,
+			--DoNotRepeatOnAttackFail = true,
+		},
+	},
+
 }
 
 OverwriteTableKeys( WeaponData, WeaponSetData )

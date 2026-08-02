@@ -95,7 +95,7 @@ sjson.hook(file, function(data)
       FilePath = "Animations\\PyreMedium\\Idle\\PyreMediumBanished",
       Type = "Book",
       VideoTexture = "PlayerMediumBanished",
-      PlaySpeed = 30.0,
+      PlaySpeed = 20.0,
       Loop = false,
       EndFrame = 60,
       NumAngles = 16,
@@ -272,7 +272,7 @@ sjson.hook(file, function(data)
       FilePath = "Animations\\PyreSmall\\Idle\\PyreSmallBanished",
       Type = "Book",
       VideoTexture = "PlayerSmallBanished",
-      PlaySpeed = 30.0,
+      PlaySpeed = 20.0,
       Loop = false,
       EndFrame = 60,
       NumAngles = 16,
@@ -426,7 +426,7 @@ sjson.hook(file, function(data)
       FilePath = "Animations\\PyreLarge\\Idle\\PyreLargeBanished",
       Type = "Book",
       VideoTexture = "PlayerLargeBanished",
-      PlaySpeed = 30.0,
+      PlaySpeed = 20.0,
       Loop = false,
       EndFrame = 60,
       NumAngles = 16,
@@ -704,6 +704,138 @@ sjson.hook(file, function(data)
       AngleFromOwner = "Ignore",
       OffsetY = -28,
       Scale = 0.5,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreMonster_Idle",
+      FilePath = "Animations\\PyreMonster\\Idle\\PyreMonsterIdle",
+      Type = "Book",
+      VideoTexture = "PlayerMonsterIdle",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 90,
+      NumAngles = 64,
+      NumFrames = 90,
+      StartFrame = 1,
+      OffsetY = -93,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreMonster_Run",
+      FilePath = "Animations\\PyreMonster\\Idle\\PyreMonsterRun",
+      Type = "Book",
+      VideoTexture = "PlayerMonsterSprint",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 60,
+      NumAngles = 32,
+      NumFrames = 60,
+      StartFrame = 1,
+      OffsetY = -101,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreMonster_Stop",
+      FilePath = "Animations\\PyreMonster\\Idle\\PyreMonsterStop",
+      Type = "Book",
+      VideoTexture = "PlayerMonsterStop",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 120,
+      NumAngles = 64,
+      NumFrames = 120,
+      StartFrame = 1,
+      OffsetY = -93,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreMonster_Walk",
+      FilePath = "Animations\\PyreMonster\\Idle\\PyreMonsterWalk",
+      Type = "Book",
+      VideoTexture = "PlayerMonsterWalk",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 120,
+      NumAngles = 64,
+      NumFrames = 120,
+      StartFrame = 1,
+      OffsetY = -93,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreMonster_Banished",
+      FilePath = "Animations\\PyreMonster\\Idle\\PyreMonsterBanished",
+      Type = "Book",
+      VideoTexture = "PlayerMonsterBanished",
+      PlaySpeed = 20.0,
+      Loop = false,
+      EndFrame = 40,
+      NumAngles = 16,
+      NumFrames = 40,
+      StartFrame = 1,
+      OffsetY = -93,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreMonster_Cast",
+      FilePath = "Animations\\PyreMonster\\Idle\\PyreMonsterCast",
+      Type = "Book",
+      VideoTexture = "PlayerMonsterCast",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 130,
+      NumAngles = 32,
+      NumFrames = 130,
+      StartFrame = 21,
+      OffsetY = -93,
       CancelOnOwnerMove = true,
       Material = 
       {

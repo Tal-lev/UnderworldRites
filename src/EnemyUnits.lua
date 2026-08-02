@@ -158,6 +158,34 @@ sjson.hook(file, function(data)
 		},
 	})
 
+	table.insert(data.Units,
+	{
+		Name = "PyreMonster",
+		InheritFrom = "1_BaseEnemy",
+		DisplayInEditor = true,
+		MoveGraphic = "PyreMonster_Run",
+		Speed = 200.0,
+		StartGraphic = "PyreMonster_Walk",
+		StopGraphic = "PyreMonster_Stop",
+		Thing = 
+		{
+			EditorOutlineDrawBounds = false,
+			Graphic = "PyreMonster_Idle",
+			Tallness = 230,
+			Scale = 0.65,
+			SelectionHeight = 330.0,
+			SelectionWidth = 260.0,
+			SelectionShiftY = 60.0,
+			Points =
+			{
+				{ X = 0, Y = 32, },
+				{ X = 64, Y = 0, },
+				{ X = 0, Y = -32, },
+				{ X = -64, Y = 0, },
+			},
+		},
+	})
+
 return data
 end)
 
@@ -564,6 +592,96 @@ UnitSetData.Pyre =
 			{ Cue = "/VO/Melinoe_1440", Text = "Spindles!", PlayFirst = true },
 			{ Cue = "/VO/Melinoe_1441", Text = "More Spindles." },
 			{ Cue = "/VO/Melinoe_1442", Text = "Come, Spindles." },
+		},
+	},
+
+	PyreMonster =
+	{
+		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy" },
+
+		ActivateFx = "EnemyPreSpawnTerrainMedium",
+		ActivateFx2 = "EnemyPreSpawnStandingMedium",
+		ActivateFxPreSpawn = "EnemySpawnBurstMedium",
+		ActivateAnimation = "Enemy_Guard_Spawn",
+		ActivateStartAlpha = 1.0,
+		StopGraphic = "PyreMonster_Stop",
+
+		DeathAnimation = "PyreMonster_Banished",
+		DeathFx = "EnemyDeathFxIris",
+
+		MaxHealth = 60,
+
+		IsAggroedSound = "/SFX/Enemy Sounds/Guard/EmoteAlerted",
+		DeathSound = "/SFX/Enemy Sounds/Guard/EmoteDying",
+		Material = "Bone",
+
+		HealthBarType = "Small",
+
+		PreferredSpawnPoint = "EnemyPointMelee",
+
+		AIOptions =
+		{
+			"AggroAI",
+		},
+		PostAggroAI = "AttackerAI",
+		AIAggroRange = 800,
+		
+		StunAnimations = 
+		{
+			Default = "Enemy_Guard_HitStun",
+			Heavy = "Enemy_Guard_HitStun_Heavy",
+		},
+
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+			PreAttackSound = "/SFX/Enemy Sounds/Guard/EmoteCharging",
+		},
+
+		MoneyDropOnDeath =
+		{
+			Chance = 0.25,
+			MinParcels = 1,
+			MaxParcels = 1,
+			MinValue = 1,
+			MaxValue = 1,
+			ValuePerDifficulty = 0.33,
+			ValuePerDifficultyMaxValueVariance = 1.3,
+		},
+
+		WeaponOptions =
+		{
+			"PyreMonsterThrow", 
+		},
+		--"PyreMediumEvade"
+		ActiveCapWeight = 0.6,
+
+		GeneratorData =
+		{
+			DifficultyRating = 5,
+			BlockEnemyTypes = {"Guard_Elite"}
+		},
+
+		EnemySightedVoiceLines =
+		{
+			RandomRemaining = true,
+			UsePlayerSource = true,
+			GameStateRequirements = 
+			{
+				-- None
+			},
+			SkipCooldownCheckIfNonePlayed = true,
+			Cooldowns =
+			{
+				{ Name = "CombatBeginsLinesPlayedRecently", Time = 300 },
+			},
+			TriggerCooldowns = { "MelinoeAnyQuipSpeech", },
+			SuccessiveChanceToPlay = 0.1,
+
+			{ Cue = "/VO/Melinoe_1653", Text = "Whispers.", },
+			{ Cue = "/VO/Melinoe_1654", Text = "Whispers!", PlayFirst = true },
+			{ Cue = "/VO/Melinoe_1655", Text = "More Whispers." },
+			{ Cue = "/VO/Melinoe_1656", Text = "Let's hear it, Whispers." },
 		},
 	},
 }

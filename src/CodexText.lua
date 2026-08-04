@@ -56,6 +56,39 @@ sjson.hook(file, function(data)
     },
 	TextOrder)
 	)
+
+    table.insert(data.Texts, sjson.to_object(
+    {
+      Id = "PyreTrail",
+      DisplayName = "Wyrm",
+    },
+	TextOrder)
+	)
+
+    table.insert(data.Texts, sjson.to_object(
+    {
+      Id = "PyreFlying",
+      DisplayName = "Harpy",
+    },
+	TextOrder)
+	)
+
+    table.insert(data.Texts, sjson.to_object(
+    {
+      Id = "PyreImp",
+      DisplayName = "Imp",
+    },
+	TextOrder)
+	)
+
+    table.insert(data.Texts, sjson.to_object(
+    {
+      Id = "PyreCaravan",
+      DisplayName = "The Blackwagon",
+    },
+	TextOrder)
+	)
+
 return data
 end)
 

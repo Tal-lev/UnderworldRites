@@ -291,3 +291,18 @@ AddGodTraitProperty({
 		
 	}
 })
+
+AddGodTraitProperty({
+	TraitSuffix = "SpecialBoon",
+	PropertyChanges = {
+		{
+			TraitName = "JarlUlsfark-UnderworldRites-AttackSizeKeepsake" ,
+			FalseTraitNames = { "AxeRallyAspect", "AxeBlockEmpowerTrait", "AxeAspectofYoungMelinoe", },
+			WeaponName = "WeaponAxeSpecial",
+			WeaponProperty = "FireFx",
+			ValuePrefix = "AxeSpinDoubleScale1_",
+			ChangeType = "Absolute",
+			ExcludeLinked = true,
+		},
+	}
+})

@@ -482,7 +482,7 @@ WeaponSetData =
 			AttackDistance = 800,
 			FireSelfVelocity = 0,
 			NumProjectiles = 9,
-			ProjectileAngleInterval = 10,
+			ProjectileAngleInterval = 15,
 			ProjectileScaleMultiplier = 0.5,
 
 			TrackTargetDuringCharge = true,

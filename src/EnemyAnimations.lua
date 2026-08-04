@@ -345,7 +345,7 @@ sjson.hook(file, function(data)
       NumFrames = 22,
       StartFrame = 1,
       OffsetY = -112,
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,
@@ -499,7 +499,7 @@ sjson.hook(file, function(data)
       NumFrames = 60,
       StartFrame = 1,
       OffsetY = -340,
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,
@@ -544,7 +544,7 @@ sjson.hook(file, function(data)
       NumFrames = 80,
       StartFrame = 1,
       OffsetY = -173,
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,
@@ -567,7 +567,7 @@ sjson.hook(file, function(data)
       StartFrame = 1,
       OffsetY = -170,
       Scale = 0.8, 
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,
@@ -792,7 +792,7 @@ sjson.hook(file, function(data)
       NumFrames = 120,
       StartFrame = 1,
       OffsetY = -93,
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,
@@ -814,7 +814,7 @@ sjson.hook(file, function(data)
       NumFrames = 40,
       StartFrame = 1,
       OffsetY = -93,
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,

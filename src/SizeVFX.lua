@@ -245,7 +245,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1",
 		InheritFrom = "AxeSpinDouble",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -253,7 +253,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Zeus",
 		InheritFrom = "AxeSpinDouble_Zeus",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -261,7 +261,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Hera",
 		InheritFrom = "AxeSpinDouble_Hera",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -269,7 +269,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Poseidon",
 		InheritFrom = "AxeSpinDouble_Poseidon",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -277,7 +277,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Demeter",
 		InheritFrom = "AxeSpinDouble_Demeter",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -285,7 +285,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Apollo",
 		InheritFrom = "AxeSpinDouble_Apollo",
 		ClearCreateAnimations = true,
-		Scale = 3,
+		Scale = 2.5,
 	})
 
 	table.insert(data.Animations,
@@ -293,7 +293,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Aphrodite",
 		InheritFrom = "AxeSpinDouble_Aphrodite",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -301,7 +301,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Hephaestus",
 		InheritFrom = "AxeSpinDouble_Hephaestus",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -309,7 +309,7 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Hestia",
 		InheritFrom = "AxeSpinDouble_Hestia",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
 
 	table.insert(data.Animations,
@@ -317,10 +317,8 @@ sjson.hook(file, function(data)
 		Name = "AxeSpinDoubleScale1_Ares",
 		InheritFrom = "AxeSpinDouble_Ares",
 		ClearCreateAnimations = true,
-		Scale = 2,
+		Scale = 1.6,
 	})
-
-
 
 return data
 end)

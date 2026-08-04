@@ -5,7 +5,7 @@ A Hades 2 mod that aims to bring aspects of Pyre into Hades 2
 ## Features
 
 - Adds **two** keepsakes based of Pyre Talismans
-- Adds **four** enemies based on Pyre races
+- Adds **five** enemies based on Pyre races
 
 ## Install
 

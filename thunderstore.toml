@@ -6,8 +6,8 @@ schemaVersion = "0.0.1"
 namespace = "JarlUlsfark"
 name = "UnderworldRites"
 versionNumber = "0.0.1"
-description = "Allows to do some super duper thing."
-websiteUrl = "https://github.com/AuthorName/ModName"
+description = "Experimental, Brings aspects of pyre into Hades 2."
+websiteUrl = "https://https://github.com/Tal-lev/UnderworldRites"
 containsNsfwContent = false
 
 [package.dependencies]

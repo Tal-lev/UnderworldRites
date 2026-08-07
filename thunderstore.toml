@@ -7,7 +7,7 @@ namespace = "JarlUlsfark"
 name = "UnderworldRites"
 versionNumber = "0.0.1"
 description = "Experimental, Brings aspects of pyre into Hades 2."
-websiteUrl = "https://https://github.com/Tal-lev/UnderworldRites"
+websiteUrl = "https://github.com/Tal-lev/UnderworldRites"
 containsNsfwContent = false
 
 [package.dependencies]

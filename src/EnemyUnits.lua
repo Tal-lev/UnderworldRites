@@ -205,7 +205,7 @@ UnitSetData.Pyre =
 		DeathAnimation = "PyreMedium_Banished",
 		DeathFx = "EnemyDeathFxIris",
 
-		MaxHealth = 60,
+		MaxHealth = 120,
 
 		IsAggroedSound = "/SFX/Enemy Sounds/Guard/EmoteAlerted",
 		DeathSound = "/SFX/Enemy Sounds/Guard/EmoteDying",
@@ -287,7 +287,7 @@ UnitSetData.Pyre =
 		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", "LowPolyEnemy" },
 		IntroEncounterName = "RadiatorIntro",
 
-		MaxHealth = 45,
+		MaxHealth = 60,
 
 		AIAggroRange = 1250,
 
@@ -609,7 +609,7 @@ UnitSetData.Pyre =
 		DeathAnimation = "PyreMonster_Banished",
 		DeathFx = "EnemyDeathFxIris",
 
-		MaxHealth = 60,
+		MaxHealth = 200,
 
 		IsAggroedSound = "/SFX/Enemy Sounds/Guard/EmoteAlerted",
 		DeathSound = "/SFX/Enemy Sounds/Guard/EmoteDying",

@@ -8,6 +8,7 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		Fuse = 4.0,
 		Speed = 300,
         UnlimitedUnitPenetration = true,
+		UnlimitedObstaclePenetration = true,
 		MultipleUnitCollisions = false,
         ClearCreateAnimations = true,
         Thing = {
@@ -74,12 +75,10 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
         Range = 1500,
 		Fuse = 5.0,
 		Speed = 300,
-        UnlimitedUnitPenetration = true,
-		MultipleUnitCollisions = false,
         ClearCreateAnimations = true,
         Thing = {
-            Graphic = "AuraCastFireFx",
-            Scale = 1.4,
+            Graphic = "AuraCastMediumFireFx",
+            Scale = 1.2,
         },
     })
 

@@ -90,6 +90,8 @@ import "EnemyWeapons.lua"
 import "EnemyUnits.lua"
 import "SizeVFX.lua"
 import "ModifyGodVFX.lua"
+import "EnemySets.lua"
+import "Fear.lua"
 
 modutil.once_loaded.game(function()
 	import "Keepsakes.lua"

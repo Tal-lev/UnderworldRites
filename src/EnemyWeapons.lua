@@ -59,10 +59,10 @@ WeaponSetData =
 
 			PreAttackDuration = 0.1,
 			PreAttackAnimationSpeed = 1,
-			FireDuration = 1.667,
-			PostAttackDuration = 2.,
+			FireDuration = 2.86,
+			PostAttackDuration = 0.8,
 			BarrelLength = 0,
-			AttackDistance = 300,
+			AttackDistance = 250,
 			FireSelfVelocity = 0,
 			FizzleOldSpawns = true,
 			MoveWithinRangeTimeout = 2,
@@ -73,7 +73,7 @@ WeaponSetData =
 
 			PreAttackEndShake = false,
 			PreAttackAnimation = "PyreMedium_Idle",
-			FireAnimation = "PyreMedium_Cast",
+			FireAnimation = "PyreMedium_AuraTurnOn",
 			PostAttackAnimation = "PyreMedium_Idle",
 			--FireFx = "EnemyAura",
 			--FireFxOffset = 300,
@@ -231,11 +231,11 @@ WeaponSetData =
 
 			ProjectileName = "PyreAuraLarge",
 
-			PreAttackDuration = 1,
+			PreAttackDuration = 0.2,
 			PreAttackAnimationSpeed = 1,
-			FireDuration = 1,
+			FireDuration = 2,
 			PostAttackDuration = 0.8,
-			BarrelLength = -100,
+			BarrelLength = -480,
 			AttackDistance = 700,
 			FireSelfVelocity = 0,
 
@@ -243,8 +243,8 @@ WeaponSetData =
 			StopBeforeFire = true,
 
 			PreAttackEndShake = false,
-			PreAttackAnimation = "PyreLarge_Cast",
-			FireAnimation = "PyreLarge_Casttwo",
+			PreAttackAnimation = "PyreLarge_Idle",
+			FireAnimation = "PyreLarge_Cast",
 			PostAttackAnimation = "PyreLarge_Idle",
 			--FireFx = "EnemyAura",
 			--FireFxOffset = 300,
@@ -275,10 +275,10 @@ WeaponSetData =
 
 			PreAttackDuration = 0.2,
 			PreAttackAnimationSpeed = 1,
-			FireDuration = 2,
-			PostAttackDuration = 2,
+			FireDuration = 2.73,
+			PostAttackDuration = 1.27,
 			BarrelLength = 0,
-			AttackDistance = 500,
+			AttackDistance = 400,
 			FireSelfVelocity = 0,
 			MoveWithinRangeTimeout = 2,
 			SkipAttackIfMoveTimeout = false,
@@ -288,7 +288,7 @@ WeaponSetData =
 
 			PreAttackEndShake = false,
 			PreAttackAnimation = "PyreLarge_Idle",
-			FireAnimation = "PyreLarge_Cast",
+			FireAnimation = "PyreLarge_AuraTurnOn",
 			PostAttackAnimation = "PyreLarge_Idle",
 			--FireFx = "EnemyAura",
 			--FireFxOffset = 300,

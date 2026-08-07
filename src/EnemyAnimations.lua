@@ -135,16 +135,16 @@ sjson.hook(file, function(data)
 
     table.insert(data.Animations,
     {
-      Name = "PyreMedium_Casttwo",
-      FilePath = "Animations\\PyreMedium\\Idle\\PyreMediumCast",
+      Name = "PyreMedium_AuraTurnOn",
+      FilePath = "Animations\\PyreMedium\\Idle\\PyreMediumAuraTurnOn",
       Type = "Book",
-      VideoTexture = "PlayerMediumCast",
+      VideoTexture = "PlayerMediumAuraTurnOn",
       PlaySpeed = 30.0,
       Loop = true,
-      EndFrame = 50,
+      EndFrame = 86,
       NumAngles = 32,
-      NumFrames = 50,
-      StartFrame = 21,
+      NumFrames = 86,
+      StartFrame = 1,
       OffsetY = -101,
       CancelOnOwnerMove = true,
       Material = 
@@ -466,16 +466,16 @@ sjson.hook(file, function(data)
 
     table.insert(data.Animations,
     {
-      Name = "PyreLarge_Casttwo",
-      FilePath = "Animations\\PyreLarge\\Idle\\PyreLargeCast",
+      Name = "PyreLarge_AuraTurnOn",
+      FilePath = "Animations\\PyreLarge\\Idle\\PyreLargeAuraTurnOn",
       Type = "Book",
-      VideoTexture = "PlayerLargeCast",
+      VideoTexture = "PlayerLargeAuraTurnOn",
       PlaySpeed = 30.0,
       Loop = true,
       StartFrame = 31,
-      EndFrame = 60,
-      NumAngles = 32,
-      NumFrames = 60,
+      EndFrame = 82,
+      NumAngles = 16,
+      NumFrames = 82,
       OffsetY = -340,
       CancelOnOwnerMove = true,
       Material = 
@@ -845,25 +845,6 @@ sjson.hook(file, function(data)
       },
     })
 
-
-    table.insert(data.Animations, 
-    {
-		  Name = "AuraCastFireFxGround",
-		  Type = "Book",
-		  FilePath = "JarlUlsfark-PyreAuraFxinHades2\\Fx\\AureCastFireFxGround\\AuraCastFireFxGround",
-		  GroupName = "Shadows",
-		  AddColor = true,
-      Color = { Red = 0.90, Green = 0.0, Blue = 1.0, },
-		  NumFrames = 17,
-		  PlaySpeed = 30,
-		  EndFrame = 17,
-		  Rotate = true,
-		  DefaultScale = 1.5,
-		  PostRotateScaleY = 0.5,
-		  ScaleRadius = 240,
-		  Material = "Emissive",
-    })
-
     table.insert(data.Animations,
     {
 		  Name = "AuraCastMediumFireFx",
@@ -908,6 +889,7 @@ sjson.hook(file, function(data)
       PlaySpeed = 20.0,
 		  NumFrames = 13,
 		  EndFrame = 13,
+      Loop = true,
       StartFrame = 1,
 		  NumAngles = 1,
       AngleFromOwner = "Ignore",

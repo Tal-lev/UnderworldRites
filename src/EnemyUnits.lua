@@ -446,7 +446,7 @@ UnitSetData.Pyre =
 
 	PyreTree =
 	{
-		InheritFrom = { "BaseQEnemy", "BaseVulnerableEnemy", },
+		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", },
 		
 		ActivateAnimation = "Enemy_DragonBurrower_Spawn",
 		ActivateFx = "DragonBurrowerBurrowFxActivate",

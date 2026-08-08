@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added Elite versions of the enemies
 - Add Miniboss PyreCaravan
+- Adjust Thing.Point of projectiles to mae them more consistent with the graphic
 - DEV: Simplify Fear.lua to only modify the specific fields
 
 ### Added

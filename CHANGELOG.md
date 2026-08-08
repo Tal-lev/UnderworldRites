@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add config options to disable either keepsakes or enemies
 - Add Living Flame Keepsake
 - Add Elite versions of the enemies
 - Add Miniboss PyreCaravan

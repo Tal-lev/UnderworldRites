@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Add Elite versions of the enemies
+- DEV: Simplify Fear.lua to only modify the specific fields
+
 ### Added
 
 - First version of the mod!

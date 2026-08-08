@@ -7,7 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Added Elite versions of the enemies
+- Add Living Flame Keepsake
+- Add Elite versions of the enemies
 - Add Miniboss PyreCaravan
 - Adjust Thing.Point of projectiles to make them more consistent with their graphic
 - DEV: Simplify Fear.lua to only modify the specific fields

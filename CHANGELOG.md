@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-08-08
+
 - Add config options to disable either keepsakes or enemies
 - Add Living Flame Keepsake
 - Add Elite versions of the enemies
@@ -17,3 +19,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - First version of the mod!
+
+[unreleased]: https://github.com/Tal-lev/UnderworldRites/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/Tal-lev/UnderworldRites/compare/01f1e2089593696bb415f1bec5224509a347914f...0.1.1

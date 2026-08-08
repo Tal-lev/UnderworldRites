@@ -73,5 +73,14 @@ sjson.hook(file, function(data)
 		StartFrame = 1,
 	})
 
+	table.insert(data.Animations,
+	{
+		Name = "Codex_Portrait_PyreCaravan",
+		InheritFrom = "Codex_Portrait_Base_01",
+		FilePath = "JarlUlsfark-UnderworldRites\\PortraitPyreCaravan",
+		EndFrame = 1,
+		StartFrame = 1,
+	})
+
 return data
 end)

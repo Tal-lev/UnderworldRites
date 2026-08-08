@@ -7,6 +7,42 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
         Range = 2000,
 		Fuse = 4.0,
 		Speed = 300,
+		Damage = 8,
+        UnlimitedUnitPenetration = true,
+		UnlimitedObstaclePenetration = true,
+		MultipleUnitCollisions = false,
+        ClearCreateAnimations = true,
+        Thing = {
+            Graphic = "AuraCastMediumFireFx",
+            Scale = 1,
+			AttachedAnim = "null",
+            Points =
+			{
+				{
+					X = -50,
+					Y = -24,
+				},
+                {
+					X = -50,
+					Y = 24,
+				},
+				{
+					X = 50,
+					Y = 24,
+				},
+				{
+					X = 50,
+					Y = -24,
+				},
+            },
+        },
+    })
+
+	table.insert(data.Projectiles, {
+        Name = "PyreAuraMedium_Elite",
+        InheritFrom = "PyreAuraMedium",
+		Damage = 10,
+		Speed = 350,
         UnlimitedUnitPenetration = true,
 		UnlimitedObstaclePenetration = true,
 		MultipleUnitCollisions = false,
@@ -136,6 +172,15 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		},
     })
 
+	table.insert(data.Projectiles, {
+        Name = "PyreAuraSphereMedium_Elite",
+        InheritFrom = "PyreAuraSphereMedium",
+		Type = "STRAIGHT",
+		Damage = 13,
+		BlastStartRadius = 400,
+		DamageRadius = 400,
+    })
+
     table.insert(data.Projectiles, {
         Name = "PyreAuraSphereLarge",
         InheritFrom = "1_BaseEnemyProjectileUndestroyable",
@@ -188,6 +233,15 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 			CanAffectInvulnerable = false,
 			Cancelable = true,
 		},
+    })
+
+	table.insert(data.Projectiles, {
+        Name = "PyreAuraSphereLarge_Elite",
+        InheritFrom = "PyreAuraSphereLarge",
+		Type = "STRAIGHT",
+		Damage = 13,
+		BlastStartRadius = 600,
+		DamageRadius = 600,
     })
 
     table.insert(data.Projectiles, {
@@ -294,6 +348,45 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		}
 	})
 
+	table.insert(data.Projectiles,
+    {
+		Name = "PyreAuraTree_Elite",
+		InheritFrom = "PyreAuraTree",
+	})
+
+	table.insert(data.Projectiles,
+    {
+		Name = "PyreAuraCaravanSmall",
+		InheritFrom = "PyreAuraTree",
+		Speed = 700,
+		Range = 700,
+		SpeedVariance = 350,
+	})
+
+	table.insert(data.Projectiles,
+    {
+		Name = "PyreAuraCaravanMedium",
+		InheritFrom = "PyreAuraCaravanSmall",
+	})
+
+	table.insert(data.Projectiles,
+    {
+		Name = "PyreAuraCaravanLarge",
+		InheritFrom = "PyreAuraCaravanSmall",
+	})
+
+	table.insert(data.Projectiles,
+    {
+		Name = "PyreAuraCaravanTree",
+		InheritFrom = "PyreAuraCaravanSmall",
+	})
+
+	table.insert(data.Projectiles,
+    {
+		Name = "PyreAuraCaravanMonster",
+		InheritFrom = "PyreAuraCaravanSmall",
+	})
+
 
 return data
 end)
@@ -306,6 +399,60 @@ OverwriteTableKeys( ProjectileData, {
 	{
 		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
 		SpawnName = "PyreTreeDefender",
+		SpawnBounceOffVictim = false,
+		SpawnBounceOffVictimVelocity = 0,
+		SpawnBounceOffVictimUpwardVelocity = 0,
+		SpawnsSkipActivatePresentation = false,
+	},
+	PyreAuraTree_Elite =
+	{
+		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
+		SpawnName = "PyreTreeDefender_Elite",
+		SpawnBounceOffVictim = false,
+		SpawnBounceOffVictimVelocity = 0,
+		SpawnBounceOffVictimUpwardVelocity = 0,
+		SpawnsSkipActivatePresentation = false,
+	},
+	PyreAuraCaravanSmall =
+	{
+		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
+		SpawnName = "PyreSmall",
+		SpawnBounceOffVictim = false,
+		SpawnBounceOffVictimVelocity = 0,
+		SpawnBounceOffVictimUpwardVelocity = 0,
+		SpawnsSkipActivatePresentation = false,
+	},
+	PyreAuraCaravanMedium =
+	{
+		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
+		SpawnName = "PyreMedium",
+		SpawnBounceOffVictim = false,
+		SpawnBounceOffVictimVelocity = 0,
+		SpawnBounceOffVictimUpwardVelocity = 0,
+		SpawnsSkipActivatePresentation = false,
+	},
+	PyreAuraCaravanLarge =
+	{
+		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
+		SpawnName = "PyreLarge",
+		SpawnBounceOffVictim = false,
+		SpawnBounceOffVictimVelocity = 0,
+		SpawnBounceOffVictimUpwardVelocity = 0,
+		SpawnsSkipActivatePresentation = false,
+	},
+	PyreAuraCaravanTree =
+	{
+		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
+		SpawnName = "PyreTree",
+		SpawnBounceOffVictim = false,
+		SpawnBounceOffVictimVelocity = 0,
+		SpawnBounceOffVictimUpwardVelocity = 0,
+		SpawnsSkipActivatePresentation = false,
+	},
+	PyreAuraCaravanMonster =
+	{
+		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
+		SpawnName = "PyreMonster",
 		SpawnBounceOffVictim = false,
 		SpawnBounceOffVictimVelocity = 0,
 		SpawnBounceOffVictimUpwardVelocity = 0,

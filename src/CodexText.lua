@@ -240,5 +240,23 @@ sjson.hook(file, function(data)
 	TextOrder)
 	)
 
+  table.insert(data.Texts, sjson.to_object(
+    {
+      Id = "CodexData_PyreCaravan_01",
+      InheritFrom = "BaseCodexEntry",
+      DisplayName = "{#CodexItalicFormat}Your roving makeshift home in the Downside.",
+    },
+	TextOrder)
+	)
+
+  table.insert(data.Texts, sjson.to_object(
+    {
+      Id = "CodexData_PyreCaravan_02",
+      InheritFrom = "BaseCodexEntry",
+      DisplayName = "{#CodexItalicFormat}Your roving makeshift home in the Downside. \n\n{#CodexItalicFormat}The blackwagon is flight-capable, though by which means you do not fully grasp as yet.",
+    },
+	TextOrder)
+	)
+
     return data
 end)

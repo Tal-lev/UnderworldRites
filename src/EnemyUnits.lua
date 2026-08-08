@@ -31,6 +31,12 @@ sjson.hook(file, function(data)
 
 	table.insert(data.Units,
 	{
+		Name = "PyreMedium_Elite",
+		InheritFrom = "PyreMedium",
+	})
+
+	table.insert(data.Units,
+	{
 		Name = "PyreSmall",
 		InheritFrom = "1_BaseEnemy",
 		DisplayInEditor = true,
@@ -60,6 +66,13 @@ sjson.hook(file, function(data)
 				{ Name = "PyreSmall_Banished" },
 			},
 		},
+	})
+
+	table.insert(data.Units,
+	{
+		Name = "PyreSmall_Elite",
+		InheritFrom = "PyreSmall",
+		Speed = 430.0,
 	})
 
 	table.insert(data.Units,
@@ -99,6 +112,12 @@ sjson.hook(file, function(data)
 
 	table.insert(data.Units,
 	{
+		Name = "PyreLarge_Elite",
+		InheritFrom = "PyreLarge",
+	})
+
+	table.insert(data.Units,
+	{
 		Name = "PyreTree",
 		InheritFrom = "1_BaseEnemy",
 		DisplayInEditor = true,
@@ -123,6 +142,12 @@ sjson.hook(file, function(data)
 				{ X = -64, Y = 0, },
 			},
 		},
+	})
+
+	table.insert(data.Units,
+	{
+		Name = "PyreTree_Elite",
+		InheritFrom = "PyreTree",
 	})
 
 	table.insert(data.Units,
@@ -160,6 +185,12 @@ sjson.hook(file, function(data)
 
 	table.insert(data.Units,
 	{
+		Name = "PyreTreeDefender_Elite",
+		InheritFrom = "PyreTreeDefender",
+	})
+
+	table.insert(data.Units,
+	{
 		Name = "PyreMonster",
 		InheritFrom = "1_BaseEnemy",
 		DisplayInEditor = true,
@@ -182,6 +213,40 @@ sjson.hook(file, function(data)
 				{ X = 64, Y = 0, },
 				{ X = 0, Y = -32, },
 				{ X = -64, Y = 0, },
+			},
+		},
+	})
+
+	table.insert(data.Units,
+	{
+		Name = "PyreMonster_Elite",
+		InheritFrom = "PyreMonster",
+	})
+
+	table.insert(data.Units,
+	{
+		Name = "PyreCaravan",
+		InheritFrom = "1_BaseEnemy",
+		DisplayInEditor = true,
+		--MoveGraphic = "PyreMedium_Run",
+		Speed = 200.0,
+		StartGraphic = "PyreCaravan_Walk",
+		--StopGraphic = "PyreMedium_Stop",
+		Thing = 
+		{
+			EditorOutlineDrawBounds = false,
+			Graphic = "PyreCaravan_Idle",
+			Tallness = 230,
+			Scale = 1.4,
+			SelectionHeight = 330.0,
+			SelectionWidth = 260.0,
+			SelectionShiftY = 60.0,
+			Points =
+			{
+				{ X = 0, Y = 64, },
+				{ X = 64, Y = 0, },
+				{ X = 0, Y = -64, },
+				{ X = 64, Y = 0, },
 			},
 		},
 	})
@@ -282,6 +347,22 @@ UnitSetData.Pyre =
 		},
 	},
 
+	PyreMedium_Elite =
+	{
+		InheritFrom = { "Elite", "PyreMedium" },
+		HealthBuffer = 150,
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+		},
+
+		WeaponOptions =
+		{
+			"PyreMediumThrow_Elite",
+			"PyreMediumAura_Elite",
+		},
+	},
+
 	PyreSmall =
 	{
 		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", "LowPolyEnemy" },
@@ -365,6 +446,22 @@ UnitSetData.Pyre =
 		},
 	},
 
+	PyreSmall_Elite =
+	{
+		InheritFrom = { "Elite", "PyreSmall" },
+		HealthBuffer = 80,
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+		},
+
+		WeaponOptions =
+		{
+			"PyreSmallThrow",
+			"PyreSmallAura_Elite",
+		},
+	},
+
 	-- tough Terminator-like foe that bursts like an explosive grape
 	PyreLarge =
 	{
@@ -444,6 +541,22 @@ UnitSetData.Pyre =
 		},
 	},
 
+	PyreLarge_Elite =
+	{
+		InheritFrom = { "Elite", "PyreLarge" },
+		HealthBuffer = 300,
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+		},
+
+		WeaponOptions =
+		{
+			"PyreLargeThrow",
+			"PyreLargeAura_Elite",
+		},
+	},
+
 	PyreTree =
 	{
 		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", },
@@ -511,6 +624,22 @@ UnitSetData.Pyre =
 		EnemySightedVoiceLines =
 		{
 			-- { GlobalVoiceLines = "MonstersSightedVoiceLines" },
+		},
+	},
+
+	PyreTree_Elite =
+	{
+		InheritFrom = { "Elite", "PyreTree" },
+		HealthBuffer = 600,
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+		},
+
+		WeaponOptions =
+		{
+			"PyreTreeThrow_Elite",
+			"PyreTreeBurrow",
 		},
 	},
 
@@ -594,6 +723,22 @@ UnitSetData.Pyre =
 			{ Cue = "/VO/Melinoe_1442", Text = "Come, Spindles." },
 		},
 	},
+
+	PyreTreeDefender_Elite = 
+	{
+		InheritFrom = { "PyreTreeDefender" },
+		HealthBuffer = 45,
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+		},
+		WeaponOptions =
+		{
+			"PyreTreeDefenderAura_Elite",
+		},
+	},
+
+	
 
 	PyreMonster =
 	{
@@ -684,6 +829,96 @@ UnitSetData.Pyre =
 			{ Cue = "/VO/Melinoe_1656", Text = "Let's hear it, Whispers." },
 		},
 	},
+
+	PyreMonster_Elite =
+	{
+		InheritFrom = { "Elite", "PyreMonster" },
+		HealthBuffer = 260,
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+		},
+
+		WeaponOptions =
+		{
+			"PyreMonsterThrow_Elite",
+		},
+	},
+
+	PyreCaravan =
+	{
+		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", },
+		
+		ActivateAnimation = "Enemy_DragonBurrower_Spawn",
+		ActivateFx = "DragonBurrowerBurrowFxActivate",
+		ActivateFx2 = "nil",
+		ActivateFxPreSpawn = "nil",
+		ActivateTint = false,
+		ActivateFadeIn = false,
+		ActivateStartAlpha = 1.0,
+		ActivateDuration = 0.2,
+		WakeUpDelay = 0.35,
+		PostActivateStop = true,
+		PostActivateScreenshake = { Distance = 4, Speed = 250, FalloffSpeed = 0, Duration = 0.24, Angle = 90, DistanceThreshold = 200 },
+
+		DeathAnimation = "PyreCaravan_Banished",
+		--DeathSound = "/SFX/Enemy Sounds/DragonBurrower/EmoteDying",
+
+		MaxHealth = 600,
+		HealthBuffer = 2000,
+		HealthBarOffsetY = -150,
+		HealthBarType = "Medium",
+
+		Material = "Organic",
+		IsAggroedSound = "/SFX/Enemy Sounds/RangedBurrower/EmoteAlerted",
+		DeathSound = "/SFX/Enemy Sounds/RangedBurrower/EmoteDying",
+
+		DamagedFxStyles =
+		{
+			Default = "HitSparkEnemyDamagedMetalRapid",
+			Rapid = "HitSparkEnemyDamagedMetalRapid",
+		},
+
+		StunAnimations = 
+		{
+			Default = "Enemy_DragonBurrower_OnHit",
+			Heavy = "Enemy_DragonBurrower_OnHit_Heavy",
+		},
+
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+
+			MoveSuccessDistance = 1,
+		},
+
+		WeaponOptions =
+		{
+			"PyreCaravanThrowSmall",
+			"PyreCaravanThrowMedium",
+			"PyreCaravanThrowLarge",
+			"PyreCaravanThrowTree",
+			"PyreCaravanThrowMonster",
+		},
+
+		AIOptions =
+		{
+			"AggroAI",
+		},
+		PostAggroAI = "AttackerAI",
+
+		GeneratorData =
+		{
+			DifficultyRating = 50,
+			BlockEnemyTypes = {"DragonBurrower_Elite"}
+		},
+		
+		EnemySightedVoiceLines =
+		{
+			-- { GlobalVoiceLines = "MonstersSightedVoiceLines" },
+		},
+	},
+
 }
 
 OverwriteTableKeys( EnemyData, UnitSetData.Pyre )

@@ -923,7 +923,97 @@ sjson.hook(file, function(data)
 		  Material= "Emissive",
     })
 
-    
+    table.insert(data.Animations,
+    {
+      Name = "PyreCaravan_Idle",
+      FilePath = "Animations\\PyreCaravan\\Idle\\PyreCaravanIdle",
+      Type = "Book",
+      VideoTexture = "Caravan_Idle",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 60,
+      NumAngles = 32,
+      NumFrames = 60,
+      StartFrame = 1,
+      OffsetY = -90,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreCaravan_Walk",
+      FilePath = "Animations\\PyreCaravan\\Idle\\PyreCaravanWalk",
+      Type = "Book",
+      VideoTexture = "Caravan_Walk",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 80,
+      NumAngles = 64,
+      NumFrames = 80,
+      StartFrame = 1,
+      OffsetY = -90,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreCaravan_Cast",
+      FilePath = "Animations\\PyreCaravan\\Idle\\PyreCaravanCast",
+      Type = "Book",
+      VideoTexture = "Caravan_Unpack",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 180,
+      NumAngles = 1,
+      NumFrames = 180,
+      StartFrame = 61,
+      OffsetY = -90,
+      AngleFromOwner = "Ignore",
+      CancelOnOwnerMove = true,
+      DisableOwnerRotation = true,
+      RandomRotation = false,
+      RotateWithGravity = false,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreCaravan_Banished",
+      FilePath = "Animations\\PyreCaravan\\Idle\\PyreCaravanCast",
+      Type = "Book",
+      VideoTexture = "Caravan_Flying",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 160,
+      NumAngles = 32,
+      NumFrames = 160,
+      StartFrame = 1,
+      OffsetY = -90,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
     
 
 

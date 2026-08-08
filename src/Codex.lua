@@ -23,7 +23,8 @@ if CodexOrdering.Otherworlds then
     table.insert(CodexOrdering.Otherworlds, "PyreFlying")
     table.insert(CodexOrdering.Otherworlds, "PyreTrail")
     table.insert(CodexOrdering.Otherworlds, "PyreMonster")
-    able.insert(CodexOrdering.Otherworlds, "PyreImp")
+    table.insert(CodexOrdering.Otherworlds, "PyreImp")
+    table.insert(CodexOrdering.Otherworlds, "PyreCaravan")
 else
     OverwriteTableKeys(CodexOrdering, {
         Otherworlds = {
@@ -35,6 +36,7 @@ else
             "PyreTrail",
             "PyreMonster",
             "PyreImp",
+            "PyreCaravan",
         },
     })
 end
@@ -57,7 +59,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreMedium" },
+								    SumOf = { "PyreMedium", "PyreMedium_Elite" },
                                     Comparison = ">=",
                                     Value = 15,
                                 },
@@ -69,7 +71,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreMedium" },
+								    SumOf = { "PyreMedium", "PyreMedium_Elite" },
                                     Comparison = ">=",
                                     Value = 30,
                                 },
@@ -87,7 +89,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreSmall" },
+								    SumOf = { "PyreSmall", "PyreSmall_Elite" },
                                     Comparison = ">=",
                                     Value = 15,
                                 },
@@ -99,7 +101,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreSmall" },
+								    SumOf = { "PyreSmall", "PyreSmall_Elite" },
                                     Comparison = ">=",
                                     Value = 30,
                                 },
@@ -117,7 +119,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreLarge" },
+								    SumOf = { "PyreLarge", "PyreLarge_Elite" },
                                     Comparison = ">=",
                                     Value = 15,
                                 },
@@ -129,7 +131,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreLarge" },
+								    SumOf = { "PyreLarge", "PyreLarge_Elite" },
                                     Comparison = ">=",
                                     Value = 30,
                                 },
@@ -147,7 +149,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreTree" },
+								    SumOf = { "PyreTree", "PyreTree_Elite" },
                                     Comparison = ">=",
                                     Value = 15,
                                 },
@@ -159,7 +161,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreTree" },
+								    SumOf = { "PyreTree", "PyreTree_Elite" },
                                     Comparison = ">=",
                                     Value = 30,
                                 },
@@ -237,7 +239,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreMonster" },
+								    SumOf = { "PyreMonster", "PyreMonster_Elite" },
                                     Comparison = ">=",
                                     Value = 15,
                                 },
@@ -249,7 +251,7 @@ else
                             {
                                 {
                                     Path = { "GameState", "EnemyKills" },
-								    SumOf = { "PyreMonster" },
+								    SumOf = { "PyreMonster", "PyreMonster_Elite" },
                                     Comparison = ">=",
                                     Value = 30,
                                 },
@@ -288,6 +290,36 @@ else
                         },
                     },
                     Image = "Codex_Portrait_PyreImp",
+                },
+                PyreCaravan = {
+                    Entries =
+                    {
+                        {
+                            UnlockGameStateRequirements =
+                            {
+                                {
+                                    Path = { "GameState", "EnemyKills" },
+								    SumOf = { "PyreCaravan" },
+                                    Comparison = ">=",
+                                    Value = 1,
+                                },
+                            },
+                            Text = "CodexData_PyreCaravan_01",
+                        },
+                        {
+                            UnlockGameStateRequirements =
+                            {
+                                {
+                                    Path = { "GameState", "EnemyKills" },
+								    SumOf = { "PyreCaravan" },
+                                    Comparison = ">=",
+                                    Value = 3,
+                                },
+                            },
+                            Text = "CodexData_PyreCaravan_02",
+                        },
+                    },
+                    Image = "Codex_Portrait_PyreCaravan",
                 },
             }
         },

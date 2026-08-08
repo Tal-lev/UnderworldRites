@@ -4,10 +4,17 @@ A Hades 2 mod that aims to bring aspects of Pyre into Hades 2
 
 ## Features
 
-- Adds **two** keepsakes based of Pyre Talismans
+- Adds **three** keepsakes based of Pyre Talismans
 - Adds **six** enemies based on Pyre races and their elite variants
 - Enemies are implemented through the 'Vow of Menace', replacing enemies in Erebus.
   - Adds a 3rd stage to the vow that increases the to 100% chance to replace enemies
+
+
+## Keepsakes
+
+- Scribe Rock - Increases Attack and Special Size (Stacks with Apollo).
+- Tailwind Crest - Increases Movement speed.
+- Living Flame - Deal increased damage to enemies with lower health than you.
 
 ## Install
 

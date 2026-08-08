@@ -243,10 +243,10 @@ sjson.hook(file, function(data)
 			SelectionShiftY = 60.0,
 			Points =
 			{
-				{ X = 0, Y = 64, },
-				{ X = 64, Y = 0, },
-				{ X = 0, Y = -64, },
-				{ X = 64, Y = 0, },
+				{ X = 0, Y = 128, },
+				{ X = 72, Y = 0, },
+				{ X = 0, Y = -128, },
+				{ X = -72, Y = 0, },
 			},
 		},
 	})

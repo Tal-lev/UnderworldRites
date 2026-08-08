@@ -19,20 +19,20 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
             Points =
 			{
 				{
-					X = -50,
-					Y = -24,
+					X = -120,
+					Y = -50,
 				},
                 {
-					X = -50,
-					Y = 24,
+					X = -120,
+					Y = 50,
 				},
 				{
-					X = 50,
-					Y = 24,
+					X = 120,
+					Y = 50,
 				},
 				{
-					X = 50,
-					Y = -24,
+					X = 120,
+					Y = -50,
 				},
             },
         },
@@ -43,34 +43,6 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
         InheritFrom = "PyreAuraMedium",
 		Damage = 10,
 		Speed = 350,
-        UnlimitedUnitPenetration = true,
-		UnlimitedObstaclePenetration = true,
-		MultipleUnitCollisions = false,
-        ClearCreateAnimations = true,
-        Thing = {
-            Graphic = "AuraCastMediumFireFx",
-            Scale = 1,
-			AttachedAnim = "null",
-            Points =
-			{
-				{
-					X = -50,
-					Y = -24,
-				},
-                {
-					X = -50,
-					Y = 24,
-				},
-				{
-					X = 50,
-					Y = 24,
-				},
-				{
-					X = 50,
-					Y = -24,
-				},
-            },
-        },
     })
 
     table.insert(data.Projectiles, {
@@ -86,19 +58,19 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 			Points =
 			{
 				{
-					X = -50,
+					X = -100,
 					Y = -20,
 				},
                 {
-					X = -50,
+					X = -100,
 					Y = 20,
 				},
 				{
-					X = 50,
+					X = 200,
 					Y = 20,
 				},
 				{
-					X = 50,
+					X = 200,
 					Y = -20,
 				},
             },

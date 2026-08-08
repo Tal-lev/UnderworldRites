@@ -83,18 +83,28 @@ modutil.mod.Path.Wrap("CodexScreenCreateChapters", function (base, screen)
     return base(screen)
 end)
 
-import "Codex.lua"
-import "EnemyAnimations.lua"
-import "EnemyProjectiles.lua"
-import "EnemyWeapons.lua"
-import "EnemyUnits.lua"
-import "SizeVFX.lua"
-import "ModifyGodVFX.lua"
-import "EnemySets.lua"
-import "Fear.lua"
+import "config.lua"
+
+if config.Enemies == true then
+	import "Codex.lua"
+	import "EnemyAnimations.lua"
+	import "EnemyProjectiles.lua"
+	import "EnemyWeapons.lua"
+	import "EnemyUnits.lua"
+	import "EnemySets.lua"
+	import "Fear.lua"
+end
+if config.Keepsakes == true then
+	import "SizeVFX.lua"
+	import "ModifyGodVFX.lua"
+end
+
+
 
 modutil.once_loaded.game(function()
-	import "Keepsakes.lua"
+	if config.Keepsakes == true then
+		import "Keepsakes.lua"
+	end
 	if (not rom.mods['NikkelM-Zagreus_Journey']) then
 		SetupRunData()
 	end

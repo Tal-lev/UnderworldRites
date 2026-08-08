@@ -1,5 +1,13 @@
-return {
-  version = 0;
+local config = {
   enabled = true;
-  message = 'Hello World!';
+  Keepsakes = true;
+  Enemies = true;
 }
+
+local configDesc = {
+  enabled = "Enable/disable UnderworldRites";
+  Keepsakes = "Whether to add Pyre themed Keepsakes";
+  Enemies = "Whether to add Pyre themed Enemies";
+}
+
+return config, configDesc

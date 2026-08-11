@@ -225,6 +225,45 @@ sjson.hook(file, function(data)
 
 	table.insert(data.Units,
 	{
+		Name = "PyreTrail",
+		InheritFrom = "1_BaseEnemy",
+		DisplayInEditor = true,
+		MoveGraphic = "PyreTrail_Walk",
+		Speed = 420.0,
+		StartGraphic = "PyreTrail_Walk",
+		StopGraphic = "PyreTrail_Stop",
+		Thing = 
+		{
+			EditorOutlineDrawBounds = false,
+			Graphic = "PyreTrail_Idle",
+			AttachedAnim = "MedusaShadow",
+			OffsetZ = 10.0,
+			Tallness = 110,
+			SelectionHeight = 160.0,
+			SelectionWidth = 160.0,
+			SelectionShiftY = 20.0,
+			Points =
+			{
+				{ X = 0, Y = 32, },
+				{ X = 64, Y = 0, },
+				{ X = 0, Y = -32, },
+				{ X = -64, Y = 0, },
+			},
+			Using =
+			{
+				{ Name = "PyreTrail_Banished" },
+			},
+		},
+	})
+
+	table.insert(data.Units,
+	{
+		Name = "PyreTrail_Elite",
+		InheritFrom = "PyreTrail",
+	})
+
+	table.insert(data.Units,
+	{
 		Name = "PyreCaravan",
 		InheritFrom = "1_BaseEnemy",
 		DisplayInEditor = true,
@@ -842,6 +881,105 @@ UnitSetData.Pyre =
 		WeaponOptions =
 		{
 			"PyreMonsterThrow_Elite",
+		},
+	},
+
+	PyreTrail =
+	{
+		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", "LowPolyEnemy" },
+		IntroEncounterName = "RadiatorIntro",
+
+		MaxHealth = 60,
+
+		AIAggroRange = 1250,
+
+		PreferredSpawnPoint = "EnemyPointMelee",
+		Groups = { "GroundEnemies" },
+		HealthBarOffsetY = -100,
+		HealthBarType = "Small",
+		Material = "Organic",
+
+		ActivateFx = "EnemyPreSpawnTerrainSmall",
+		ActivateFx2 = "EnemyPreSpawnStandingSmall",
+		ActivateFxPreSpawn = "EnemySpawnBurstSmall",
+		ActivateAnimation = "Enemy_Radiator_Spawn",
+		ActivateStartAlpha = 1.0,
+		ArmorSparkAnimation = "HitSparkArmor_Small",
+
+		IsAggroedSound = "/SFX/Enemy Sounds/Radiator/EmoteAlerted",
+		DeathSound = "/SFX/Enemy Sounds/Radiator/EmoteDying",
+		DeathAnimation = "PyreSmall_Banished",
+		DeathFx = "EnemyDeathFxIris",
+
+		AIOptions =
+		{
+			"AggroAI",
+		},
+		
+		StunAnimations = 
+		{
+			Default = "Enemy_Radiator_HitStun",
+		},
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+			PreAttackSound = "/SFX/Enemy Sounds/Radiator/EmoteCharging",
+
+			ExpireProjectilesOnHitStun = true,
+		},
+		EndAIThreadWaitOnFreezeEnd = true,
+		InterruptWeaponOnFreeze = true,
+
+		WeaponOptions =
+		{
+			"PyreSmallThrow",
+			"PyreSmallAura",
+		},
+
+		GeneratorData =
+		{
+			DifficultyRating = 7,
+			BlockEnemyTypes = {"Radiator_Elite"}
+		},
+
+		ActiveCapWeight = 0.5,
+
+		EnemySightedVoiceLines =
+		{
+			UsePlayerSource = true,
+			RandomRemaining = true,
+			GameStateRequirements = 
+			{
+				-- None
+			},
+			SkipCooldownCheckIfNonePlayed = true,
+			Cooldowns =
+			{
+				{ Name = "CombatBeginsLinesPlayedRecently", Time = 300 },
+			},
+			TriggerCooldowns = { "MelinoeAnyQuipSpeech", },
+			SuccessiveChanceToPlay = 0.1,
+
+			{ Cue = "/VO/Melinoe_1439", Text = "Spindles." },
+			{ Cue = "/VO/Melinoe_1440", Text = "Spindles!", PlayFirst = true },
+			{ Cue = "/VO/Melinoe_1441", Text = "More Spindles." },
+			{ Cue = "/VO/Melinoe_1442", Text = "Come, Spindles." },
+		},
+	},
+
+	PyreTrail_Elite =
+	{
+		InheritFrom = { "Elite", "PyreSmall" },
+		HealthBuffer = 80,
+		DefaultAIData =
+		{
+			DeepInheritance = true,
+		},
+
+		WeaponOptions =
+		{
+			"PyreSmallThrow",
+			"PyreSmallAura_Elite",
 		},
 	},
 

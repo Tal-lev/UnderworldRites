@@ -1014,8 +1014,144 @@ sjson.hook(file, function(data)
         Directionality = 0.0,
       },
     })
-    
 
+    table.insert(data.Animations,
+    {
+      Name = "PyreTrail_Idle",
+      FilePath = "Animations\\PyreTrail\\Idle\\PyreTrailIdle",
+      Type = "Book",
+      VideoTexture = "PlayerTrailIdle",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 30,
+      NumAngles = 16,
+      NumFrames = 30,
+      StartFrame = 1,
+      Scale = 0.7,
+      OffsetY = -143,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+    
+    table.insert(data.Animations,
+    {
+      Name = "PyreTrail_Stop",
+      FilePath = "Animations\\PyreTrail\\Idle\\PyreTrailStop",
+      Type = "Book",
+      VideoTexture = "PlayerTrailStop",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 30,
+      NumAngles = 16,
+      NumFrames = 30,
+      StartFrame = 1,
+      Scale = 0.7,
+      OffsetY = -143,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreTrail_Walk",
+      FilePath = "Animations\\PyreTrail\\Idle\\PyreTrailWalk",
+      Type = "Book",
+      VideoTexture = "PlayerTrailWalk",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 96,
+      NumAngles = 32,
+      NumFrames = 96,
+      StartFrame = 1,
+      Scale = 0.7,
+      OffsetY = -143,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreTrail_Banished",
+      FilePath = "Animations\\PyreTrail\\Idle\\PyreTrailBanished",
+      Type = "Book",
+      VideoTexture = "PlayerTrailBanished",
+      PlaySpeed = 20.0,
+      Loop = false,
+      EndFrame = 30,
+      NumAngles = 16,
+      NumFrames = 30,
+      Scale = 0.7,
+      StartFrame = 1,
+      OffsetY = -143,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreTrail_Cast",
+      FilePath = "Animations\\PyreTrail\\Idle\\PyreTrailCast",
+      Type = "Book",
+      VideoTexture = "PlayerTrailCast",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 60,
+      NumAngles = 16,
+      NumFrames = 60,
+      StartFrame = 1,
+      Scale = 0.7,
+      OffsetY = -143,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
+
+    table.insert(data.Animations,
+    {
+      Name = "PyreTrail_AuraTurnOn",
+      FilePath = "Animations\\PyreTrail\\Idle\\PyreTrailAuraTurnOn",
+      Type = "Book",
+      VideoTexture = "PlayerTrailAuraTurnOn",
+      PlaySpeed = 30.0,
+      Loop = true,
+      EndFrame = 55,
+      NumAngles = 16,
+      NumFrames = 55,
+      StartFrame = 1,
+      Scale = 0.7,
+      OffsetY = -280,
+      CancelOnOwnerMove = true,
+      Material = 
+      {
+        Ambient = 0.0,
+        Diffuse = 0.0,
+        Directionality = 0.0,
+      },
+    })
 
 return data
 end)

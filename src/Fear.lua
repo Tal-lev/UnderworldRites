@@ -6,10 +6,12 @@ OverwriteTableKeys(MetaUpgradeData.NextBiomeEnemyShrineUpgrade.SwapMap, {
     Brawler_Elite = { Name = "PyreLarge_Elite", ActiveCapWeight = 1.3 },
     Radiator = { Name = "PyreSmall", },
     Radiator_Elite = { Name = "PyreSmall_Elite", },
-    Screamer = { Name = "PyreTree", },
+    Screamer = { Name = "PyreTrail", },
     Screamer_Elite = { Name = "PyreTree_Elite", },
     Mage = { Name = "PyreMonster", },
     Mage_Elite = { Name = "PyreMonster_Elite", },
+	SiegeVine = { Name = "PyreTree", },
+	SiegeVine_Elite = { Name = "PyreTree_Elite", },
 })
 
 --To add Caravan instead of Treant

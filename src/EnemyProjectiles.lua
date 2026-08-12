@@ -320,6 +320,51 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		}
 	})
 
+	table.insert(data.Projectiles, {
+        Name = "PyreAuraTrail",
+        InheritFrom = "PyreAuraMedium",
+		Range = 0,
+		Speed = 0,
+		Fuse = 4.0,
+		GroupName = "FX_Terrain",
+		Thing = {
+            Graphic = "AuraTrailFx",
+            Scale = 1,
+			AttachedAnim = "null",
+            Points =
+			{
+				{
+					X = -80,
+					Y = -30,
+				},
+                {
+					X = -80,
+					Y = 30,
+				},
+				{
+					X = 80,
+					Y = 30,
+				},
+				{
+					X = 80,
+					Y = -30,
+				},
+            },
+        },
+		Effect =
+		{
+			Name = "HeroOnHitStun",
+			Duration = 0.2,
+			DisableMove = true,
+			DisableRotate = true,
+			DisableAttack = false,
+			Active = false,
+			CanAffectInvulnerable = false,
+			Cancelable = true,
+		},
+
+    })
+
 	table.insert(data.Projectiles,
     {
 		Name = "PyreAuraTree_Elite",
@@ -359,6 +404,11 @@ local file = rom.path.combine(rom.paths.Content, 'Game/Projectiles/Enemy_BiomeG_
 		InheritFrom = "PyreAuraCaravanSmall",
 	})
 
+	table.insert(data.Projectiles,
+    {
+		Name = "PyreAuraCaravanTrail",
+		InheritFrom = "PyreAuraCaravanSmall",
+	})
 
 return data
 end)
@@ -425,6 +475,15 @@ OverwriteTableKeys( ProjectileData, {
 	{
 		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
 		SpawnName = "PyreMonster",
+		SpawnBounceOffVictim = false,
+		SpawnBounceOffVictimVelocity = 0,
+		SpawnBounceOffVictimUpwardVelocity = 0,
+		SpawnsSkipActivatePresentation = false,
+	},
+	PyreAuraCaravanTrail =
+	{
+		OnDeathFunctionName = _PLUGIN.guid .. "." .. "ProjectileSpawnUnitOnDeath",
+		SpawnName = "PyreTrail",
 		SpawnBounceOffVictim = false,
 		SpawnBounceOffVictimVelocity = 0,
 		SpawnBounceOffVictimUpwardVelocity = 0,

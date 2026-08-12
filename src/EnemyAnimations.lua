@@ -36,7 +36,7 @@ sjson.hook(file, function(data)
       NumFrames = 60,
       StartFrame = 1,
       OffsetY = -101,
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,
@@ -1027,7 +1027,7 @@ sjson.hook(file, function(data)
       NumAngles = 16,
       NumFrames = 30,
       StartFrame = 1,
-      Scale = 0.7,
+      Scale = 0.6,
       OffsetY = -143,
       CancelOnOwnerMove = true,
       Material = 
@@ -1050,7 +1050,7 @@ sjson.hook(file, function(data)
       NumAngles = 16,
       NumFrames = 30,
       StartFrame = 1,
-      Scale = 0.7,
+      Scale = 0.6,
       OffsetY = -143,
       CancelOnOwnerMove = true,
       Material = 
@@ -1073,9 +1073,9 @@ sjson.hook(file, function(data)
       NumAngles = 32,
       NumFrames = 96,
       StartFrame = 1,
-      Scale = 0.7,
+      Scale = 0.6,
       OffsetY = -143,
-      CancelOnOwnerMove = true,
+      CancelOnOwnerMove = false,
       Material = 
       {
         Ambient = 0.0,
@@ -1095,7 +1095,7 @@ sjson.hook(file, function(data)
       EndFrame = 30,
       NumAngles = 16,
       NumFrames = 30,
-      Scale = 0.7,
+      Scale = 0.6,
       StartFrame = 1,
       OffsetY = -143,
       CancelOnOwnerMove = true,
@@ -1119,7 +1119,7 @@ sjson.hook(file, function(data)
       NumAngles = 16,
       NumFrames = 60,
       StartFrame = 1,
-      Scale = 0.7,
+      Scale = 0.6,
       OffsetY = -143,
       CancelOnOwnerMove = true,
       Material = 
@@ -1132,26 +1132,21 @@ sjson.hook(file, function(data)
 
     table.insert(data.Animations,
     {
-      Name = "PyreTrail_AuraTurnOn",
-      FilePath = "Animations\\PyreTrail\\Idle\\PyreTrailAuraTurnOn",
-      Type = "Book",
-      VideoTexture = "PlayerTrailAuraTurnOn",
+		  Name = "AuraTrailFx",
+      FilePath = "JarlUlsfark-PyreAuraFxinHades2\\Fx\\AuraTrailFireFx\\AuraTrailFireFx",
+		  GroupName = "Art_Standing01",
+      Type="Slide",
+		  AddColor = false,
       PlaySpeed = 30.0,
-      Loop = true,
-      EndFrame = 55,
-      NumAngles = 16,
-      NumFrames = 55,
+		  NumFrames = 5,
+		  EndFrame = 5,
       StartFrame = 1,
-      Scale = 0.7,
-      OffsetY = -280,
-      CancelOnOwnerMove = true,
-      Material = 
-      {
-        Ambient = 0.0,
-        Diffuse = 0.0,
-        Directionality = 0.0,
-      },
+		  NumAngles = 1,
+		  DefaultScale = 2.0,
+		  ScaleRadius = 300,
+		  Material= "Emissive",
     })
+
 
 return data
 end)

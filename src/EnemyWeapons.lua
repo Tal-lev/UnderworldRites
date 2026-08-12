@@ -805,6 +805,77 @@ WeaponSetData =
 		},
 	},
 
+	PyreTrailAuraWalk = {
+		AIData =
+		{
+			DeepInheritance = true,
+			ProjectileName = "PyreAuraTrail",
+			PreAttackDuration = 0.4,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 3.6667,
+			PostAttackDuration = 0.2,
+			BarrelLength = -50,
+			AttackDistance = 600,
+			
+			--FireProjectileStartDelay = 0.12,
+			FireTicks = 5,
+			FireInterval = 0.30,
+			FireSelfVelocity = 900,
+			PreAttackStop = true,
+			StopBeforeFire = true,
+			PostAttackStop = true,
+			TrackTargetDuringCharge = true,
+			TrackTargetDuringFire = true,
+
+			FizzleOldSpawns = false,
+			TrackTargetDuringCharge = true,
+			PreAttackAnimation = "PyreTrail_Idle",
+			FireAnimation = "PyreTrail_Walk",
+			PostAttackAnimation = "PyreTrail_Idle",
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = false,
+			DoNotRepeatOnAttackFail = true,
+		},
+	},
+
+	PyreTrailAuraWalk_Elite =
+	{
+		AIData =
+		{
+			DeepInheritance = true,
+			ProjectileName = "PyreAuraTrail",
+			PreAttackDuration = 0.4,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 3.6667,
+			PostAttackDuration = 0.2,
+			BarrelLength = -50,
+			AttackDistance = 600,
+			
+			--FireProjectileStartDelay = 0.12,
+			FireTicks = 8,
+			FireInterval = 0.30,
+			FireSelfVelocity = 900,
+			PreAttackStop = true,
+			StopBeforeFire = true,
+			PostAttackStop = true,
+			TrackTargetDuringCharge = true,
+			TrackTargetDuringFire = true,
+
+			FizzleOldSpawns = false,
+			TrackTargetDuringCharge = true,
+			PreAttackAnimation = "PyreTrail_Idle",
+			FireAnimation = "PyreTrail_Walk",
+			PostAttackAnimation = "PyreTrail_Idle",
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = false,
+			DoNotRepeatOnAttackFail = true,
+		},
+	},
+
 	PyreCaravanThrowSmall =
 	{
 		AIData =
@@ -987,6 +1058,49 @@ WeaponSetData =
 
 
 			ProjectileName = "PyreAuraCaravanMonster",
+
+			PreAttackDuration = .2,
+			PreAttackAnimationSpeed = 1,
+			FireDuration = 3,
+			PostAttackDuration = 0.1,
+			BarrelLength = 0,
+			AttackDistance = 700,
+			FireSelfVelocity = 0,
+			Scatter = 360,
+
+			TrackTargetDuringCharge = false,
+			StopBeforeFire = true,
+
+			PreAttackEndShake = false,
+			PreAttackAnimation = "PyreCaravan_Idle",
+			FireAnimation = "PyreCaravan_Cast",
+			PostAttackAnimation = "PyreCaravan_Idle",
+			--FireFx = "EnemyAura",
+			--FireFxOffset = 300,
+			PreAttackFx = "EnemyChargeFxIn_Guard",
+			EndPreAttackFx = true,
+
+			ExpireProjectilesOnHitStun = true,
+			--DoNotRepeatOnAttackFail = true,
+		},
+
+		Sounds =
+		{
+			FireSounds =
+			{
+				{ Name = "/SFX/Enemy Sounds/Guard/EmoteAttacking" },
+			},
+		},
+	},
+
+	PyreCaravanThrowTrail =
+	{
+		AIData =
+		{
+			DeepInheritance = true,
+
+
+			ProjectileName = "PyreAuraCaravanTrail",
 
 			PreAttackDuration = .2,
 			PreAttackAnimationSpeed = 1,

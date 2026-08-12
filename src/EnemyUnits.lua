@@ -889,7 +889,7 @@ UnitSetData.Pyre =
 		InheritFrom = { "BaseFEnemy", "BaseVulnerableEnemy", "LowPolyEnemy" },
 		IntroEncounterName = "RadiatorIntro",
 
-		MaxHealth = 60,
+		MaxHealth =150,
 
 		AIAggroRange = 1250,
 
@@ -932,8 +932,7 @@ UnitSetData.Pyre =
 
 		WeaponOptions =
 		{
-			"PyreSmallThrow",
-			"PyreSmallAura",
+			"PyreTrailAuraWalk",
 		},
 
 		GeneratorData =
@@ -969,17 +968,15 @@ UnitSetData.Pyre =
 
 	PyreTrail_Elite =
 	{
-		InheritFrom = { "Elite", "PyreSmall" },
-		HealthBuffer = 80,
+		InheritFrom = { "Elite", "PyreTrail" },
+		HealthBuffer = 180,
 		DefaultAIData =
 		{
 			DeepInheritance = true,
 		},
-
 		WeaponOptions =
 		{
-			"PyreSmallThrow",
-			"PyreSmallAura_Elite",
+			"PyreTrailAuraWalk_Elite",
 		},
 	},
 

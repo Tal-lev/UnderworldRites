@@ -54,7 +54,7 @@ gods.CreateKeepsake({
 })
 
 ModUtil.Path.Wrap("Damage", function(baseFunc, victim, triggerArgs)
-    if HeroHasTrait("JarlUlsfark-UnderworldRites-HigherHealthDamage") and triggerArgs and triggerArgs.AttackerTable and triggerArgs.AttackerTable.Name == "Default" and victim ~= CurrentRun.Hero then
+    if HeroHasTrait("JarlUlsfark-UnderworldRites-HigherHealthDamage") and triggerArgs and triggerArgs.AttackerTable and triggerArgs.AttackerTable.Name == "Default" and victim ~= CurrentRun.Hero and victim.Health then
 		if CurrentRun.Hero.Health >= victim.Health then
 			local trait = GetHeroTrait("JarlUlsfark-UnderworldRites-HigherHealthDamage")
 			triggerArgs.DamageAmount = triggerArgs.DamageAmount * (trait.DamageMultiplier or 1.1) 

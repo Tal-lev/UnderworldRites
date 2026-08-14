@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added PyreTrail and its Elite variant
 - PyreCaravan can now summon PyreTrail
+- Fix: Crash when 'damaging' an obstacle without health
 
 ## [0.1.2] - 2026-08-11
 

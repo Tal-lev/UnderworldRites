@@ -4,11 +4,10 @@ A Hades 2 mod that aims to bring aspects of Pyre into Hades 2
 
 ## Features
 
-- Adds **four** keepsakes based of Pyre Talismans
+- Adds **four** keepsakes based on Pyre Talismans
 - Adds **seven** enemies based on Pyre races and their elite variants
 - Enemies are implemented through the 'Vow of Menace', replacing enemies in Erebus.
-  - Adds a 3rd stage to the vow that increases the to 100% chance to replace enemies
-
+  - Adds a 3rd stage to the Vow of Menace that increases the chance to replace enemies to 100% 
 
 ## Keepsakes
 

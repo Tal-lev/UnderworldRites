@@ -96,7 +96,7 @@ end)
 ModUtil.Path.Wrap("FamiliarCast", function(base, weaponData, args)
     if HeroHasTrait("JarlUlsfark-UnderworldRites--ConstantCast") then
         if SessionMapState and SessionMapState.FamiliarCastProjectileId then
-           local trait = GetHeroTrait("JarlUlsfark-UnderworldRites-ConstantCast")
+            local trait = GetHeroTrait("JarlUlsfark-UnderworldRites-ConstantCast")
             SetDamageRadiusMultiplier({ Id = SessionMapState.FamiliarCastProjectileId, Fraction = trait.SizeScaler, Duration = 0 })
         end
     end

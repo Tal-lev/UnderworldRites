@@ -92,19 +92,6 @@ ModUtil.Path.Wrap("WeaponCastFired", function(base, owner, weaponData, args, tri
     return base(owner, weaponData, args, triggerArgs)
 end)
 
--- Also handle familiar casts
-ModUtil.Path.Wrap("FamiliarCast", function(base, weaponData, args)
-    if HeroHasTrait("JarlUlsfark-UnderworldRites--ConstantCast") then
-        if SessionMapState and SessionMapState.FamiliarCastProjectileId then
-            local trait = GetHeroTrait("JarlUlsfark-UnderworldRites-ConstantCast")
-            SetDamageRadiusMultiplier({ Id = SessionMapState.FamiliarCastProjectileId, Fraction = trait.SizeScaler, Duration = 0 })
-        end
-    end
-    
-    return base(weaponData, args)
-end)
-
-
 function mod.SetupCastAutofire( hero, args ) 
 	if CurrentRun and not CurrentRun.Hero.IsDead and CurrentRun.CurrentRoom and CurrentRun.CurrentRoom.BlockCombat then
 		return
@@ -132,7 +119,7 @@ function mod.CastAutofire( args )
 
 	while CurrentRun and CurrentRun.Hero and CurrentRun.Hero.ObjectId and (not CurrentRun.Hero.IsDead or (CurrentHubRoom ~= nil and CurrentHubRoom.AllowEnemyAIActive)) do
 		SessionMapState.AutoCastIds = {}
-		if not IsInputAllowed({}) or not AreScreensInactiveExcluding({ "TraitTrayScreen", "Codex"}) or SessionMapState.SkyEntranceInProgress or MapState.HostilePolymorph or not IsEmpty( MapState.TransformArgs ) or CurrentRun.Cleared then
+		if not IsInputAllowed({}) or not AreScreensInactiveExcluding({ "TraitTrayScreen", "Codex"}) or SessionMapState.SkyEntranceInProgress or MapState.HostilePolymorph or not IsEmpty( MapState.TransformArgs ) or CurrentRun.Cleared or not HeroHasTrait("JarlUlsfark-UnderworldRites-ConstantCast") then
 			if not IsEmpty(SessionMapState.AutoCastIds ) then
 				ExpireProjectiles({ ProjectileIds = SessionMapState.AutoCastIds })
 				ExpireProjectiles({ Names = { "ProjectileCast" }})

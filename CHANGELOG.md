@@ -7,9 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Added PyreTrail and its Elite variant
-- PyreCaravan can now summon PyreTrail
-- Added Black Claw keepsake
+- New Enemy
+  - Added PyreTrail and its Elite variant
+- New Keepsake
+  - Added Black Claw keepsake
+- PyreCaravan can now summon PyreTrail 
 - Fix: Crash when 'damaging' an obstacle without health
 
 ## [0.1.2] - 2026-08-11

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-08-27
+
 - New Enemy
   - Added PyreTrail and its Elite variant
 - New Keepsake
@@ -31,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First version of the mod!
 
-[unreleased]: https://github.com/Tal-lev/UnderworldRites/compare/0.1.2...HEAD
+[unreleased]: https://github.com/Tal-lev/UnderworldRites/compare/0.1.3...HEAD
+[0.1.3]: https://github.com/Tal-lev/UnderworldRites/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/Tal-lev/UnderworldRites/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/Tal-lev/UnderworldRites/compare/01f1e2089593696bb415f1bec5224509a347914f...0.1.1

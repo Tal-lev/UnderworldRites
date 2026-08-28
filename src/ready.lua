@@ -105,7 +105,7 @@ modutil.once_loaded.game(function()
 	if config.Keepsakes == true then
 		import "Keepsakes.lua"
 	end
-	if (not rom.mods['NikkelM-Zagreus_Journey']) then
-		SetupRunData()
-	end
+	--if (not rom.mods['NikkelM-Zagreus_Journey']) then
+	SetupRunData()
+	--end
 end)
